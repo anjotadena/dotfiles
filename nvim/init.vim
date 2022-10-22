@@ -40,7 +40,6 @@ call plug#begin("~/.vim/plugged")
    Plug 'morhetz/gruvbox'
    Plug 'dracula/vim'
    Plug 'ryanoasis/vim-devicons'
-   Plug 'SirVer/ultisnips'
    Plug 'honza/vim-snippets'
    Plug 'scrooloose/nerdtree'
    Plug 'preservim/nerdcommenter'
@@ -50,6 +49,17 @@ call plug#begin("~/.vim/plugged")
    Plug 'norcalli/nvim-colorizer.lua'
    Plug 'vim-airline/vim-airline'
    Plug 'vim-airline/vim-airline-themes'
+   Plug 'tpope/vim-commentary'
+   Plug 'airblade/vim-gitgutter'
+   Plug 'mkitt/tabline.vim'
+
+   " GO
+   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+   Plug 'SirVer/ultisnips'
+   
+   " Theme
+   Plug 'NLKNguyen/papercolor-theme'   
 call plug#end()
 
 " Color schemes
