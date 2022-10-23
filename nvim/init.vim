@@ -69,7 +69,9 @@ endif
 
 syntax enable
 " colorscheme dracula
-colorscheme gruvbox
+" colorscheme gruvbox
+set background=dark
+colorscheme PaperColor
 
 " Open new split panes to right and below
 set splitright
