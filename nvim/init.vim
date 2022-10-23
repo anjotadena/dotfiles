@@ -1,3 +1,5 @@
+let mapleader=","
+
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
@@ -26,13 +28,12 @@ set number relativenumber
 set scrolloff=7
 set backspace=indent,eol,start
 set fileformat=unix
+set laststatus=2
+set vb
 
 set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 "
-
-let mapleader = ' '
-
 " ----------------------------------
 "  PLUGINS
 call plug#begin("~/.vim/plugged")
@@ -52,6 +53,7 @@ call plug#begin("~/.vim/plugged")
    Plug 'tpope/vim-commentary'
    Plug 'airblade/vim-gitgutter'
    Plug 'mkitt/tabline.vim'
+   Plug 'ctrlpvim/ctrlp.vim'
 
    " GO
    Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
@@ -117,3 +119,10 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/utlisnips']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+set runtimepath^=~/.config/nvim/bundle/ctrlp.vim
+let g:ctrlp_user_command = ['.git', 'cd %s && git  ls-files -co --exclude-standard']
+
+" vim-gitgutter
+set updatetime=500
+
